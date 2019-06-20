@@ -9,8 +9,10 @@ module.exports = (pages) => layout(html`
     <button type="submit">Search</button>
   </form>
   <hr>
-  <ul class="list-unstyled">
-    <ul>
-      <!-- PLACEHOLDER LIST OF PAGES -->
-    </ul>
-  </ul>`);
+  <div class="article-list">
+    <ol>
+    ${pages.map(page => html`
+    <li>${page.dataValues.title}</li>`
+    )}
+    </ol>
+  </div>`);

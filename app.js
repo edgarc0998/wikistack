@@ -30,8 +30,12 @@ const init = async () => {
   // await model.User.sync();
   // await model.Page.sync();
 
-  await model.db.sync({force: true});
-  
+  await db.sync({force: true});
+
+  // model.Page.beforeValidate(() => {
+
+  // })
+
 
   app.listen(port, () => {
     console.log('app listening');
