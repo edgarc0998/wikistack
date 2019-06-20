@@ -5,14 +5,17 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Users/kaiyuepan/fullstack/wikistack/app.js"
+    "start": "nodemon /Users/edgar/Desktop/wikistack/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "html-template-tag": "^3.1.0",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.8.10"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
