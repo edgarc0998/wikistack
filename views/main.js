@@ -12,7 +12,7 @@ module.exports = (pages) => layout(html`
   <div class="article-list">
     <ol>
     ${pages.map(page => html`
-    <li>${page.dataValues.title}</li>`
+    <li><a href="/wiki/${page.dataValues.slug}">${page.dataValues.title}</a></li>`
     )}
     </ol>
   </div>`);

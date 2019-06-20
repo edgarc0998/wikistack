@@ -12,10 +12,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 app.use('/wiki', wikiRoutes);
+app.use('/users', userRoutes);
+
 
 
 app.get('/', (req, res) => {
-  // res.send(index.main(""));
   res.redirect('/wiki');
 })
 

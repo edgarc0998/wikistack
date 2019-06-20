@@ -56,7 +56,8 @@ router.post('/', async(req,res,next) => {
     }
     catch(error) {
         next(error);
-    }})
+    }}
+)
 
 router.get('/add', async(req,res,next) => {
     try {
@@ -75,7 +76,15 @@ router.get('/:slug', async (req, res, next) => {
                 slug: req.params.slug
             }
         });
-        res.send(index.wikiPage(page,page.author));
+
+        const author = await model.User.findOne({
+            where: {
+                id: page.authorId
+            }
+        })
+
+
+        res.send(index.wikiPage(page, author.name));
 
     } catch(err){
         next(err);
