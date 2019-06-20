@@ -6,20 +6,45 @@ module.exports = () => layout(html`
   <hr>
   <form method="POST" action="/wiki/">
     
-    <div>PLACEHOLDER FOR AUTHOR NAME FIELD</div>
-    
-    <div>PLACEHOLDER FOR AUTHOR EMAIL FIELD</div>
-    
     <div class="form-group">
-      <label for="title" class="col-sm-2 control-label">Page Title</label>
+      <label for ="author" class="col-sm-2 control-label">Author</label>
       <div class="col-sm-10">
-        <input id="title" name="title" type="text" class="form-control"/>
+        <input id="author" name="author" type="text" class="form-control" required/>
       </div>
     </div>
 
-    <div>PLACEHOLDER FOR PAGE CONTENT TEXTAREA FIELD</div>
-    
-    <div>PLACEHOLDER FOR PAGE STATUS INPUT FIELD</div>
+
+    <div class="form-group">
+      <label for ="email" class="col-sm-2 control-label">Author Email</label>
+      <div class="col-sm-10">
+        <input id="email" name="email" type="email" class="form-control" required/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for ="title" class="col-sm-2 control-label">Page Title</label>
+      <div class="col-sm-10">
+        <input id="title" name="title" type="text" class="form-control" required/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for ="content" class="col-sm-2 control-label">Content</label>
+      <div class="col-sm-10">
+        <textarea id = "content" name = "content" type = "text" class = "form-control" required></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for ="status" class="col-sm-2 control-label">Status</label>
+      <div class="col-sm-10">
+        <select id="status" name="status" type="text" class="form-control">
+        <option id = "closed">Closed</option>
+          <option id = "open">Open</option>
+
+        </select>
+      </div>
+    </div>
 
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-primary">submit</button>

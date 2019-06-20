@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon Users/kaiyuepan/fullstack/wikistack/app.js"
+    "start": "nodemon /Users/edgar/Desktop/wikistack/app.js"
   },
   "author": "",
   "license": "ISC",
